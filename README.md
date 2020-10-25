@@ -1,7 +1,7 @@
 # Multi-Modal Deep Clustering: Unsupervised Partitioning of Images
 [[Paper]](https://arxiv.org/abs/1912.02678)
 
-Pytorch code used for running the experiments in Multi-Modal Deep Clustering: Unsupervised Partitioning of Images, accepted at ICPR 2020.
+Pytorch code used for running the main experiments in Multi-Modal Deep Clustering: Unsupervised Partitioning of Images, accepted at ICPR 2020.
 
 
 

@@ -5,7 +5,7 @@ Pytorch code used for running the experiments in Multi-Modal Deep Clustering: Un
 
 
 
-# Citation
+### Citation
 If you find this repository useful in your research, please cite the following paper:
 
     @inproceedings{shiran2020mmdc,

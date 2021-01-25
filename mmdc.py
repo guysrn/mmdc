@@ -45,16 +45,17 @@ class MultiModalDeepClustering:
         self.clustering_crit.cuda()
         self.rot_crit.cuda()
 
-    def load_checkpoint(self, path):
-        checkpoint = torch.load(os.path.join(path, "model.pt"))
+    def load_checkpoint(self, model_path, out_path=None):
+        checkpoint = torch.load(model_path)
         self.model.load_state_dict(checkpoint["model_state_dict"])
         self.optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
         self.lr_scheduler.load_state_dict(checkpoint["lr_scheduler_state_dict"])
         self.current_epoch = checkpoint["epoch"] + 1
         self.targets = checkpoint["targets"]
-        self.out_dir = path
-        with open(os.path.join(path, "run_stats.pickle"), "rb") as handle:
-            self.run_stats = pickle.load(handle)
+        if out_path:
+            self.out_dir = path
+            with open(os.path.join(out_path, "run_stats.pickle"), "rb") as handle:
+                self.run_stats = pickle.load(handle)
 
     def save_checkpoint(self, path):
         torch.save({"epoch": self.current_epoch,

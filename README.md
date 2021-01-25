@@ -18,6 +18,15 @@ python3 main.py --dataset imagenet10 --k 10 --arch resnet18 --rotnet --lr 0.05 -
 
 python3 main.py --dataset tinyimagenet --k 200 --arch resnet18 --rotnet --lr 0.05 --wd 0.0001 --epochs 400 --lr_decay_epochs 300 --lr_decay_gamma 0.2 --refine_epoch 350 --crop_size 40 --input_size 64 --flip --color_jitter
 ```
+### Checkpoints
+| Dataset          | ACC               |Download link |
+|------------------|-------------------|--------------|
+| MNIST            | 99.1              |[Download](https://drive.google.com/file/d/1uqypeLL1ltmvBswXKaYBDjPdiGGzKce2/view?usp=sharing)  |
+| CIFAR10          | 84.3              |[Download](https://drive.google.com/file/d/1-EGtlYj1KWe60JibtsoelDeIqwn10WP3/view?usp=sharing)  |
+| CIFAR100         | 43.7              |[Download](https://drive.google.com/file/d/1VkTpH22GHz-Xz0QaI4zXlvaEvj8o5-Bk/view?usp=sharing)  |
+| STL-10           | 67.2              |[Download](https://drive.google.com/file/d/15PtB2gfP4OWpuIioMUy1Y_C3UdaOC9kA/view?usp=sharing)  |
+| ImageNet-10      | 83.4              |[Download](https://drive.google.com/file/d/1UL5PvYyTmCAws8Nskiqx9W5HQbf6JzhZ/view?usp=sharing)  |
+| Tiny-ImageNet    | 15.2              |[Download](https://drive.google.com/file/d/18xUThrSl4_fOT8coExrfgD3YvNSX7VgX/view?usp=sharing)  |
 
 ### Requirements
 - python >= 3.6

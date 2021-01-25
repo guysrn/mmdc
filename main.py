@@ -9,7 +9,8 @@ def init_parser():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--resume', action='store_true', help='resume training of a model')
-    parser.add_argument('--path', type=str, help='path of model', default='')
+    parser.add_argument('--path', type=str, help='path of out dir for resuming training', default=None)
+    parser.add_argument('--model_path', type=str, help='path of model checkpoint', default=None)
     parser.add_argument('--workers', type=int, help='number of dataloader workers', default=8)
     parser.add_argument('--device', type=str, help='gpu device (None to use all available)', default=None)
     parser.add_argument('--plot_rate', type=int, help='plot results every how many epochs', default=1)
@@ -76,8 +77,8 @@ if __name__ == '__main__':
 
     mmdc = MultiModalDeepClustering(args, out_dir)
     if args.resume:
-        print(f"resuming training from: {args.path}")
-        mmdc.load_checkpoint(args.path)
+        print(f"resuming training from checkpoint: {args.model_path}")
+        mmdc.load_checkpoint(args.model_path, args.path)
     mmdc.train()
 
     print("finished.")
